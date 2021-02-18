@@ -4,7 +4,7 @@
 <head>
     <title>String Processor - e15 Project 1</title>
     <meta charset='utf-8'>
-    <!-- <link href='css/styles.css' rel='stylesheet'> -->
+    <link href='css/styles.css' rel='stylesheet'>
 </head>
 
 <body>

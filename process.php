@@ -1,12 +1,14 @@
 <?php
 
+echo $_GET["inputString"];
+
 function isPalindrome($String) {
   $reverse = strrev ($String);
 
   if ($reverse == $String) {
-    return $String." is a palindrome.";
+    return "'".$String."' is a palindrome.";
   } else {
-    return $String." is not a palindrome.";
+    return "'".$String."' is not a palindrome.";
   }
 }
 
@@ -44,6 +46,6 @@ $_SESSION['Vowels']= vowelCount($_GET["inputString"]);
 $_SESSION['Shifted'] = letterShift($_GET["inputString"]);
 
 header("Location: process-view.php");
-die();
 
-require 'index.php'
+
+?>
