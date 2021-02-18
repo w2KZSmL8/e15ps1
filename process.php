@@ -21,7 +21,7 @@ function vowelCount($String) {
 function letterShift($String) {
   $string_array = str_split($String);
   $empty = "";
-  foreach($string_array as $character) 
+  foreach($string_array as $character)
   {
     if (ord($character) >= 97 and ord($character) <= 122) {
     $new_char = chr(ord($character) + 1);
@@ -30,10 +30,20 @@ function letterShift($String) {
     } else {
     $new_char = $character;
     }
-  
+
     $empty = $empty.$new_char;
-  }  
+  }
   return $empty;
 }
+
+session_start();
+
+$_SESSION['Input'] = $_GET["inputString"];
+$_SESSION['Palindrome'] = isPalindrome($_GET["inputString"]);
+$_SESSION['Vowels']= vowelCount($_GET["inputString"]);
+$_SESSION['Shifted'] = letterShift($_GET["inputString"]);
+
+header("Location: process-view.php");
+die();
 
 require 'index.php'
